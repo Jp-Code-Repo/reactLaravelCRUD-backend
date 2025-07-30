@@ -9,3 +9,7 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::post('/create-new-post', [PostController::class, 'createnewpost']);
+Route::get('/get-all-post', [PostController::class, 'getallpost']);
+Route::post('/delete-post', [PostController::class, 'deletepost']);
+Route::get('/post-by-id/{id}', [PostController::class, 'postbyid']);
+Route::post('/edit-post', [PostController::class, 'editpost']);
